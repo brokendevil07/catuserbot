@@ -108,7 +108,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Please get your own catuserbot, and don't use mine! Join @catuserbot17 help "
+            reply_pop_up_alert = "who the hell u touch me make ur own bot u shit, thank me latter Join @catuserbot17 help "
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"secret_(.+?)_(.+)")))
@@ -163,7 +163,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                         caption=plugin_name,
                     )
         else:
-            reply_pop_up_alert = "Please get your own catuserbot, and don't use mine! Join @catuserbot17 help "
+            reply_pop_up_alert = "who the hell u touch me make ur own bot u shit, thank me latter Join @catuserbot17 help "
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
@@ -171,7 +171,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         if event.query.user_id == bot.uid:
             await event.edit("menu closed")
         else:
-            reply_pop_up_alert = "Please get your own catuserbot, and don't use mine! Join @catuserbot17 help "
+            reply_pop_up_alert = "who the hell u touch me make ur own bot u shit, thank me latter Join @catuserbot17 help "
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"stats")))
@@ -191,7 +191,7 @@ def paginate_help(page_number, loaded_plugins, prefix):
     helpable_plugins = sorted(helpable_plugins)
     modules = [
         custom.Button.inline(
-            "{} {} {}".format(
+            "{} {} {}".format(("💜👿", x , "👿💜")
                 Config.EMOJI_TO_DISPLAY_IN_HELP, x, Config.EMOJI_TO_DISPLAY_IN_HELP
             ),
             data="us_plugin_{}".format(x),
@@ -222,11 +222,11 @@ def paginate_help(page_number, loaded_plugins, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "⌫", data="{}_prev({})".format(prefix, modulo_page)
+                    "👈👈", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline("Close", data="close"),
                 custom.Button.inline(
-                    "⌦", data="{}_next({})".format(prefix, modulo_page)
+                    "👉👉", data="{}_next({})".format(prefix, modulo_page)
                 ),
             )
         ]
